@@ -1,7 +1,7 @@
 {
 	"name": "util.polyfill",
 	"description": "window/Array/Object polyfill methods",
-	"version": "0.0.1",
+	"version": "0.2.0",
 	"author": "popeindustries <alex@pope-industries.com>",
 	"dependencies": {
 	},

@@ -48,3 +48,25 @@ if (!window.cancelAnimationFrame) {
 		clearTimeout(id);
 	};
 }
+
+/**
+ * Function.bind()
+ * --https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind--
+ */
+if (!Function.prototype.bind) {
+	Function.prototype.bind = function(context) {
+		if (typeof this !== 'function') {
+			throw new TypeError("Function.prototype.bind - what is trying to be bound is not callable");
+		}
+		var args = Array.prototype.slice.call(arguments, 1)
+			, toBind = this
+			, noop = function() {}
+			, bound = function() {
+				return toBind.apply(this instanceof noop ? this : context || window,
+					args.concat(Array.prototype.slice.call(arguments)));
+			};
+		noop.prototype = this.prototype;
+		bound.prototype = new noop();
+		return bound;
+	}
+}
