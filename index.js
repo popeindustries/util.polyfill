@@ -28,7 +28,7 @@ for (var i = 0, n = vendors.length; i < n; i++) {
 
 if (!window.requestAnimationFrame) {
 	window.requestAnimationFrame = function(callback, element) {
-		var currFrameTime = +(new Date)
+		var currFrameTime = +(new Date())
 			, id, interval, lastTime;
 		if (lastFrameTime == null) {
 			lastFrameTime = currFrameTime;
