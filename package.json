@@ -2,7 +2,7 @@
 	"name": "util.polyfill",
 	"description": "window/Array/Object polyfill methods",
 	"version": "0.2.0",
-	"author": "popeindustries <alex@pope-industries.com>",
+	"author": "Thomas Lein <thomaslein@gmail.com>",
 	"dependencies": {
 	},
 	"main": "index.js",
